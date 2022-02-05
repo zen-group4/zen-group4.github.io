@@ -96,7 +96,7 @@ width: 120px;
     width: 25rem;
     max-width: 100%;
     font-family: $secondary-font;
-    background-color: $light-blue-2;
+    background-color: color-3;
     padding: 0;
     margin: 3rem 0;
 ​
@@ -104,7 +104,7 @@ width: 120px;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: $light-blue-2;
+        background-color: color-3;
         li:first-of-type {
             border-top:1px solid $pacific-blue;
         }
@@ -165,7 +165,7 @@ width: 120px;
                     background-color: $dark-jungle-green;  
                 }
                 &:active {
-                    color: $light-blue-2;
+                    color: color-3;
                     background-color: $dark-jungle-green;
                 }
                 &:visited {
@@ -191,7 +191,7 @@ width: 120px;
             background-color: $pacific-blue;  
         }
         &:active {
-            color: $light-blue-2;
+            color: color-3;
             background-color: $dark-jungle-green;
         }
         &:visited {

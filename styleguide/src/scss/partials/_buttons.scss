@@ -12,7 +12,7 @@
     color: $dark-jungle-green;
     padding: 0.6em 2em;
     cursor: pointer;
-    background: $light-blue-2;
+    background: color-3;
   
     &:focus {
       outline: none;
@@ -49,7 +49,7 @@
   
       .no-touch &:hover {
         color: $dark-jungle-green;
-        background: $light-blue-2;
+        background: color-3;
       }
     }
   
@@ -61,6 +61,6 @@
   
   .cd-buttons .cd-box:nth-of-type(2) span {
     /* CSS class name color */
-    color: $light-blue-2;
+    color: color-3;
   }
   

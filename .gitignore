@@ -5,6 +5,7 @@ build
 
 .cache
 .sass-cache/
+.parcel-cache
 *.css
 *.css.map
 *.sass.map

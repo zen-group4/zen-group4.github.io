@@ -1,35 +1,96 @@
-//Navigation Styles - Alesha McCown
+// Navigation Styles - Alesha McCown
 
-/*
-$cultured-white: #f5f5f5ff;
-$light-blue: #a7ced6ff;
-$light-blue-2: #9ccad3ff;
-$pacific-blue: #58a6b6ff;
-$dark-jungle-green: #13272bff;
-*/
 
-// $primary-font:'Bilbo Swash Caps', cursive;
-// $secondary-font: 'Ubuntu', sans-serif;
+header {
+background-color: $color-2;
+}
+
+.cd-logo {
+/* logo box style */
+background-color: $color-1;
+width: 120px;
+
+@include MQ(M) {
+    width: 180px;
+}
+}
+
+.cd-main-nav {
+    /* main navigation background color - full screen on small devices */
+    background: $color-2;
+
+    li a {
+        color: $color-5;
+        border-color: lighten($color-2, 5%);
+    }
+
+    @include MQ(M) {
+        li a {
+            color: lighten($color-2, 40%);
+
+            &.selected {
+                color: $color-5;
+                box-shadow: 0 2px 0 $color-1;
+            }
+
+            &:hover {
+                color: $color-5;
+            }
+        }
+    }
+}
+  
+.cd-nav-trigger span {
+    /* hamburger menu */
+    background-color: $color-5;
+
+    &::before,
+    &::after {
+        /* upper and lower lines */
+        background-color: $color-5;
+    }
+}
+
+.nav-is-visible .cd-nav-trigger span {
+    /* hide line in the center on mobile when nav is visible */
+    background-color: rgba($color-5, 0);
+
+    &::before,
+    &::after {
+        /* preserve visibility of upper and lower lines - close icon */
+        background-color: rgba($color-5, 1);
+    }
+}
+
+.cd-download {
+    /* download button top-right visible on big devices */
+    background-color: lighten($color-2, 10%);
+
+    .no-touch &:hover {
+        background-color: lighten($color-2, 15%);
+    }
+
+    span {
+        /* tooltip */
+        background: $color-1;
+        color: $color-5;
+
+        &::before {
+        /* right arrow color */
+        border-color: $color-1;
+        }
+    }
+}
+  
 
 #navigation{ 
-
-    // nav {
-    //     padding: .5em 0 .5em 0;
-    //     margin: .5em 0 .5em 0;
-    // }
-
     h3 {
     font-size: 2.5rem;
     font-family: $primary-font;
     color: $dark-jungle-green;
-    // margin: .25rem;
-    // padding: .25rem;
-    //background-color: $light-blue;
     }
-   
 }
-
-
+​
 .cd-primary-nav {
     text-align: left;
     width: 25rem;
@@ -38,9 +99,8 @@ $dark-jungle-green: #13272bff;
     background-color: $light-blue-2;
     padding: 0;
     margin: 3rem 0;
-
+​
     ul{
-        //background-color: $light-blue-2;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -50,20 +110,15 @@ $dark-jungle-green: #13272bff;
         }
         
         li {
-            // margin: 0;
-            // padding: 1rem;
             border-bottom: 1px solid $pacific-blue;
             font-size: 1em;
             
-
             a {
                 display: block;
                 color: $dark-jungle-green;
                 text-decoration: none;
                 padding: 1rem 2rem;
-                
-               
-                
+                   
                 &:hover {
                     color: $cultured-white;
                     background-color: $pacific-blue;  
@@ -81,19 +136,13 @@ $dark-jungle-green: #13272bff;
         }
     }
 }
-
+​
 .cd-secondary-nav {
-    
-    // text-align: left;
     background-color: $cultured-white;
     font-family: $primary-font;
     font-size: 2em;
     padding: 0;
     margin: 3rem 0;
-
-    // max-width: 100%;
-    // text-align: center;
-    
     
     ul{
         list-style-type: none;
@@ -102,19 +151,14 @@ $dark-jungle-green: #13272bff;
         background-color: $pacific-blue;
         overflow: hidden;
        
-
         li {
             float: left;
-            //padding: 2.5rem;
-            //border-bottom: 1px solid $dark-jungle-green;
             
-
             a {
                 display: block;
                 color: $dark-jungle-green;
                 padding: 1.5rem 2.5rem;
                 text-align: center;
-                //background-color: $light-blue-2;
                 text-decoration: none;
                 &:hover {
                     color: $cultured-white;
@@ -131,23 +175,16 @@ $dark-jungle-green: #13272bff;
         }
     }
 }
-
+​
 #other-links-list {
     font-family: $secondary-font;
     padding: 0;
     margin: 2rem 0;
-   // font-size: 1em;
     line-height: 1.5em;
-    //background-color: pink;
-    //border-bottom: none;
+​
    li a {
-       //font: $secondary-font;
-        //display: block;
         color: $pacific-blue;
-        
-        //padding: 1.5rem 2.5rem;
         text-align: left;
-        //background-color: $light-blue-2;
         text-decoration: underline;
         &:hover {
             color: $cultured-white;
@@ -162,5 +199,3 @@ $dark-jungle-green: #13272bff;
         }
     }
 }
-
-

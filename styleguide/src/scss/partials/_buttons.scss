@@ -1,0 +1,66 @@
+//Buttons Styling - Alesha McCown
+
+
+.btn {
+    border:4px solid $pacific-blue;
+    box-shadow: none;
+    border-radius: 0.25em;
+    font: {
+      size: 2.5rem;
+      family: $primary-font;
+    }
+    color: $dark-jungle-green;
+    padding: 0.6em 2em;
+    cursor: pointer;
+    background: color-3;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    .no-touch &:hover {
+      background: $cultured-white;
+      font: $secondary-font;
+    }
+  
+    &.btn-success {
+      background: $dark-jungle-green;
+      color: $cultured-white;
+  
+      .no-touch &:hover {
+        background: lighten($dark-jungle-green, 25%);
+      }
+    }
+  
+    &.btn-alert {
+      background: darkred;
+      color: $cultured-white;
+  
+      .no-touch &:hover {
+        background: red;
+        color: $cultured-white;
+      }
+    }
+  
+    &.btn-outline {
+      color: $pacific-blue;
+      background: transparent;
+      box-shadow: inset 0 0 0 1px $pacific-blue;
+  
+      .no-touch &:hover {
+        color: $dark-jungle-green;
+        background: color-3;
+      }
+    }
+  
+    // @include MQ(S) {
+    //   font-size: 2.5rem;
+    // }
+    //Need to fix this
+  }
+  
+  .cd-buttons .cd-box:nth-of-type(2) span {
+    /* CSS class name color */
+    color: color-3;
+  }
+  

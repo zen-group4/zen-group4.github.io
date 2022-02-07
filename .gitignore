@@ -1,6 +1,16 @@
+node_modules
+build
+
+*.zip
+
 .token
 
+.cache
 .sass-cache/
+.parcel-cache
+*.css
 *.css.map
 *.sass.map
 *.scss.map
+
+.DS_Store

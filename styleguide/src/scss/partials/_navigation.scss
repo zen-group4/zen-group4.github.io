@@ -81,30 +81,28 @@ width: 120px;
         }
     }
 }
-  
 
 #navigation{ 
     h3 {
     font-size: 2.5rem;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     color: $dark-jungle-green;
     }
 }
-​
+
 .cd-primary-nav {
     text-align: left;
     width: 25rem;
     max-width: 100%;
-    font-family: $secondary-font;
-    background-color: color-3;
+    font-family: $primary-font;
+    background-color: $light-blue;
     padding: 0;
     margin: 3rem 0;
-​
     ul{
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: color-3;
+        background-color: $light-blue;
         li:first-of-type {
             border-top:1px solid $pacific-blue;
         }
@@ -136,14 +134,13 @@ width: 120px;
         }
     }
 }
-​
+
 .cd-secondary-nav {
     background-color: $cultured-white;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     font-size: 2em;
     padding: 0;
     margin: 3rem 0;
-    
     ul{
         list-style-type: none;
         margin: 0;
@@ -175,13 +172,12 @@ width: 120px;
         }
     }
 }
-​
+
 #other-links-list {
-    font-family: $secondary-font;
+    font-family: $primary-font;
     padding: 0;
     margin: 2rem 0;
     line-height: 1.5em;
-​
    li a {
         color: $pacific-blue;
         text-align: left;

@@ -7,7 +7,7 @@ background-color: $color-2;
 
 .cd-logo {
 /* logo box style */
-background-color: $color-1;
+background-color: $color-4;
 width: 120px;
 
 @include MQ(M) {
@@ -64,7 +64,7 @@ width: 120px;
 
 .cd-download {
     /* download button top-right visible on big devices */
-    background-color: lighten($color-2, 10%);
+    background-color: $color-4;
 
     .no-touch &:hover {
         background-color: lighten($color-2, 15%);

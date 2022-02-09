@@ -103,6 +103,7 @@ width: 120px;
         margin: 0;
         padding: 0;
         background-color: $light-blue;
+        
         li:first-of-type {
             border-top:1px solid $pacific-blue;
         }
@@ -118,7 +119,7 @@ width: 120px;
                 padding: 1rem 2rem;
                    
                 &:hover {
-                    color: $cultured-white;
+                    color: $light-blue;
                     background-color: $pacific-blue;  
                 }
                 
@@ -128,7 +129,7 @@ width: 120px;
                 }
                 
                 &:visited {
-                    color: $pacific-blue;
+                    color: darken($pacific-blue, 20%);
                 }
             }
         }
@@ -159,14 +160,14 @@ width: 120px;
                 text-decoration: none;
                 &:hover {
                     color: $cultured-white;
-                    background-color: $dark-jungle-green;  
+                    background-color: $light-blue;  
                 }
                 &:active {
                     color: color-3;
                     background-color: $dark-jungle-green;
                 }
                 &:visited {
-                    color: $dark-jungle-green;
+                    color: lighten($dark-jungle-green, 15%);
                 }
             }
         }
@@ -179,19 +180,19 @@ width: 120px;
     margin: 2rem 0;
     line-height: 1.5em;
    li a {
-        color: $pacific-blue;
+        color: darken($pacific-blue, 20%);
         text-align: left;
-        text-decoration: underline;
+        //text-decoration: underline;
         &:hover {
             color: $cultured-white;
             background-color: $pacific-blue;  
         }
         &:active {
-            color: color-3;
+            color: $cultured-white;
             background-color: $dark-jungle-green;
         }
         &:visited {
-            color: $dark-jungle-green;
+            color: lighten($pacific-blue, 5%);
         }
     }
 }

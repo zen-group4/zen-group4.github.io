@@ -94,6 +94,7 @@ contentSections.forEach(function(section) {
     section.children[0].innerHTML
   }</a>`;
   mainNavElement.appendChild(item);
+  console.log(mainNavElement);
 });
 
 // open navigation on mobile
@@ -101,9 +102,9 @@ document.querySelector('.cd-nav-trigger').addEventListener('click', function() {
   document.querySelector('header').classList.toggle('nav-is-visible');
 });
 // smooth scroll to the selected section
-document.querySelectorAll('.cd-main-nav a[href^="#"]').forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
+  // document.querySelectorAll('.cd-main-nav a[href^="#"]').forEach(function(link) {
+  // link.addEventListener('click', function(event) {
+  //   event.preventDefault();
     const header = document.querySelector('header');
     header.classList.remove('nav-is-visible');
     const target = document.querySelector(this.hash),
@@ -116,8 +117,8 @@ document.querySelectorAll('.cd-main-nav a[href^="#"]').forEach(function(link) {
       parseInt(target.offsetTop - headerHeight - topMargin),
       200
     );
-  });
-});
+  // });
+// });
 
 function scrollTo(element, to, duration) {
   if (duration <= 0) return;

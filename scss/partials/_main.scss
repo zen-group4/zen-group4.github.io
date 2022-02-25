@@ -17,6 +17,32 @@
 }
 */
 
+.main{   
+    display: grid;
+    grid-column:  1 / span 3;
+    grid-row: 2/3;
+}
+
+
+
+//image2
+.participation::before{
+    content: url('jellyfish-svg');
+    position: absolute;
+    float: right;
+    top: 60em;
+    right: 0;
+    display: block;
+    width: 20%;
+    height: 25em;
+    border: .5em solid $teal;
+
+    @include MQ(S) {
+        display: none;      // TODO: Put semi-transparent jellyfish graphic behind text.
+    }
+}
+
+
 .main h3::before {
     content: url(styleguide/src/assets/branding/favicon-1.png);
     vertical-align: middle;
@@ -27,6 +53,15 @@
     content: url(styleguide/src/assets/branding/favicon-1.png);
     vertical-align: middle;
     padding-left: 0.5em;
+}
+
+.explanation{
+    display:block;
+    padding: 0 25%;
+
+    @include MQ(S) {
+        padding: 0;
+    }
 }
 
 .requirements p:last-of-type {

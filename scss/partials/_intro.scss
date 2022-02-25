@@ -1,5 +1,51 @@
 // Put intro elements here.
 
+.intro {
+    grid-column: 2/3;
+    display: block;
+    grid-row: 1/2; 
+}
+
+//Image1
+.intro::after {
+    content: url('jellyfish-svg');
+    position: absolute;
+    top: 12.5em;
+    left: 0;
+    display: block;
+    width: 20%;
+    height: 25em;
+    border: .5em solid $teal;
+
+    @include MQ(S) {
+        display: none;  // TODO: Put semi-transparent jellyfish graphic behind text.
+    }
+}
+
+
+.summary {
+    display: block;
+    position: absolute;
+    top: 37em;
+    left: 0;
+    width: 22%;
+    
+    @include MQ(S) {
+        position: static;
+        width: 100%;
+    }
+}
+
+
+.preamble {
+    display: block;
+    padding-top: 7em;
+
+    @include MQ(S) {
+        padding-top: 0;
+    }
+}
+
 .preamble > h3::before {
     content: url(styleguide/src/assets/branding/favicon-1.png);
     vertical-align: middle;
@@ -11,3 +57,4 @@
     vertical-align: middle;
     padding-left: 0.5em;
 }
+

@@ -1,0 +1,9 @@
+// Style elements in sidebar here.
+
+.sidebar {
+    @include MQ(S) {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}

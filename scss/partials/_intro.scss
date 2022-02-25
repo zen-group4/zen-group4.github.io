@@ -1,0 +1,13 @@
+// Put intro elements here.
+
+.preamble > h3::before {
+    content: url(styleguide/src/assets/branding/favicon-1.png);
+    vertical-align: middle;
+    padding-right: 0.5em;
+}
+
+.preamble h3::after {
+    content: url(styleguide/src/assets/branding/favicon-1.png);
+    vertical-align: middle;
+    padding-left: 0.5em;
+}

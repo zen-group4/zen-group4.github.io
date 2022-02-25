@@ -1,0 +1,82 @@
+// Style elements in main section here.
+
+/*  Jellyfish graphic - The following CSS doesn't quite work
+.explanation::before,
+.benefits::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: -25%;
+    background: url("styleguide/src/assets/jellyfish.svg");
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+*/
+
+.main h3::before {
+    content: url(styleguide/src/assets/branding/favicon-1.png);
+    vertical-align: middle;
+    padding-right: 0.5em;
+}
+
+.main h3::after {
+    content: url(styleguide/src/assets/branding/favicon-1.png);
+    vertical-align: middle;
+    padding-left: 0.5em;
+}
+
+.requirements p:last-of-type {
+    text-align: center;
+    margin: 0 2em;
+    margin-top: 1em
+}
+
+
+
+// Include footer as well, because it's small
+footer {
+    margin-top: 1.5em;
+    text-align: center;
+    background-color: lighten($dark-jungle-green, 15%);
+
+    a {
+        width: 3em;
+        height: 3em;
+        padding: 1.75em 0;
+        margin: 0 .5em;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        color: lighten(rgba(255, 255, 255, 0.5), 50%);
+        
+        &::before {
+            font-family: $footer-font;
+            font-size: 3em;
+        }
+    }
+
+    .zen-validate-html::before {
+        content: "5";
+    }
+    
+    .zen-validate-css::before {
+        content: "3";
+    }
+    
+    .zen-license::before {
+        content: "c";
+    }
+    
+    .zen-accessibility::before {
+        content: "a";
+    }
+    
+    .zen-github::before {
+        content: "g";
+    }    
+}
+

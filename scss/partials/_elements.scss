@@ -1,0 +1,16 @@
+@mixin cd-box {
+    border: 5px solid $dark-jungle-green;  
+    border-radius: 20px;
+    background: $pacific-blue; 
+    padding: 10px;
+  }
+
+@mixin p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: $dark-jungle-green;
+
+  a {
+    color: $dark-jungle-green;
+    text-decoration: none;
+  }}

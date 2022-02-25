@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+@font-face {
+    font-family: "verdemoderna";
+    src: url("https://zen-group4.github.io/fonts/verdemoderna.eot");
+    src: url("https://zen-group4.github.io/fonts/verdemoderna.woff"),
+    url("https://zen-group4.github.io/fonts/verdemoderna.otf") format("opentype"),
+    url("https://zen-group4.github.io/fonts/verdemoderna.svg#filename") format("svg");
+}
+
+@import "partials/reset";
+@import "partials/layout";
+@import "partials/prefix-mixins";
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/basic-style";
+@import "partials/intro";
+@import "partials/main";
+@import "partials/sidebar";

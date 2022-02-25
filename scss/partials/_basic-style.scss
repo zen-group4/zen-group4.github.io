@@ -27,3 +27,14 @@ a {
     text-decoration: none;
 }
 
+.page-wrapper {
+    display:grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    position: relative; 
+
+    @include MQ(S) {
+        display: block;
+    }
+}

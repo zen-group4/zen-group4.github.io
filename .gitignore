@@ -6,6 +6,7 @@ build
 
 .token
 
+.vscode
 .cache
 .sass-cache/
 .parcel-cache

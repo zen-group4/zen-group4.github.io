@@ -19,6 +19,7 @@ $sidebar-margin-sm: 1.5em;
 .wrapper {
     position: absolute;
     left: 50%;
+    height: 50%;
     transform: translate(-50%);
 
     @include MQ(L) {

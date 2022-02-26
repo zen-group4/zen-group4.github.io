@@ -6,25 +6,32 @@ footer {
     background-color: lighten($dark-jungle-green, 15%);
 
     a {
-        width: 4em;
-        height: 4em;
-        padding: 1.75em 0;
+        width: 3em;
+        height: 3em;
         margin: 0 .5em;
-        @include MQ(S) {
-            width: 3em;
-            height: 3em;
-            margin: 0 .5em;
-        }
+        color: lighten(rgba(255, 255, 255, 0.5), 50%);
         display: inline-block;
         overflow: hidden;
-        position: relative;
-        color: lighten(rgba(255, 255, 255, 0.5), 50%);
+        @include MQ(L) {
+            width: 4em;
+            height: 4em;
+            padding: 1.75em 0;
+            margin: 0 .5em;
+            // display: inline-block;
+            // overflow: hidden;
+            position: relative;
+        }
+        // @include MQ(S) {
+        //     width: 3em;
+        //     height: 3em;
+        //     margin: 0 .5em;
+        // }
         
         &::before {
+            font-size: 3em;
             font-family: $footer-font;
-            font-size: 4em;
-            @include MQ(S) {
-                font-size: 3em;
+            @include MQ(L) {
+                font-size: 4em;
             }
         }
     }
@@ -34,11 +41,11 @@ footer {
     }
     
     .zen-validate-css::before {
-        content: "3";
+       content: "3";
     }
     
     .zen-license::before {
-        content: "c";
+       content: "c";
     }
     
     .zen-accessibility::before {

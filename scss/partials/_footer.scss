@@ -6,26 +6,23 @@ footer {
     background-color: lighten($dark-jungle-green, 15%);
 
     a {
-        width: 3em;
-        height: 3em;
+        $size: 3em;
+        display: inline-block;
+        width: $size;
+        height: $size;
+        padding: 1em 0;
         margin: 0 .5em;
         color: lighten(rgba(255, 255, 255, 0.5), 50%);
-        display: inline-block;
         overflow: hidden;
+
         @include MQ(L) {
-            width: 4em;
-            height: 4em;
+            $size: 4em;
+            width: $size;
+            height: $size;
             padding: 1.75em 0;
-            margin: 0 .5em;
-            // display: inline-block;
-            // overflow: hidden;
+            margin: 0 1em;
             position: relative;
         }
-        // @include MQ(S) {
-        //     width: 3em;
-        //     height: 3em;
-        //     margin: 0 .5em;
-        // }
         
         &::before {
             font-size: 3em;

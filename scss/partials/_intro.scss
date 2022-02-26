@@ -21,9 +21,6 @@
         height: 25em;
         border: .5em solid $teal;
     }
-    // @include MQ(S) {
-    //     display: none;  // TODO: Put semi-transparent jellyfish graphic behind text.
-    // }
 }
 
 
@@ -32,8 +29,6 @@
     //width: 100%;
     display: block;
     @include MQ(L) {
-        // position: static;
-        // width: 100%;
         position: absolute;
         top: 37em;
         left: 0;
@@ -47,9 +42,38 @@
     @include MQ(L) {
         padding-top: 5em;
     }
-    // @include MQ(S) {
-    //     padding-top: 0;
-    // }
+}
+
+.preamble::before {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+    opacity: 0.3;
+    z-index: -1;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%);
+    margin-top: 4em;
+
+    @include MQ(L) {
+        display: none;
+        position: static;
+        content: "";
+    }
+}
+
+.benefits::before {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+    opacity: 0.25;
+    z-index: -1;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%);
+    margin-top: 6em;
+
+    @include MQ(L) {
+        display: none;
+        position: static;
+        content: "";
+    }
 }
 
 .preamble > h3::before {

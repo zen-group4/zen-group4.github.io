@@ -18,28 +18,26 @@
 */
 
 .main{   
-    display: grid;
     grid-column:  1 / span 3;
     grid-row: 2/3;
 }
 
 
-
-//image2
+//image2--bottom image
 .participation::before{
+    @include MQ(L) {
     content: url('jellyfish-svg');
     position: absolute;
-    float: right;
-    top: 60em;
+    bottom: 11em;
     right: 0;
     display: block;
     width: 20%;
     height: 25em;
     border: .5em solid $teal;
-
-    @include MQ(S) {
-        display: none;      // TODO: Put semi-transparent jellyfish graphic behind text.
     }
+    // @include MQ(S) {
+    //     display: none;      // TODO: Put semi-transparent jellyfish graphic behind text.
+    // }
 }
 
 
@@ -57,12 +55,23 @@
 
 .explanation{
     display:block;
-    padding: 0 25%;
-
-    @include MQ(S) {
-        padding: 0;
+    //padding: 0 25%;
+    @include MQ(L) {
+        padding: 0 25%;
     }
 }
+
+.requirements{
+    display:block;
+    @include MQ(L) {
+        padding-right: 25%; 
+    }
+}
+
+
+.benefits{
+    display:block;
+}  
 
 .requirements p:last-of-type {
     text-align: center;

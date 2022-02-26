@@ -16,14 +16,23 @@ header::before {
     transform: translate(-50%, -45%);
 
     @include MQ(L) {
-        width: 30em;
-        height: 28em;
-        border-radius: 15em / 14em;
+        width: 32em;
+        height: 30em;
+        border-radius: 16em / 15em;
         transform: translate(-50%, -50%);
     }
 
     background: radial-gradient($cultured-white, $light-blue);
     z-index: -1;
+}
+
+@include MQ(L) {
+    header::after {
+        content: url(https://zen-group4.github.io/styleguide/src/assets/branding/touch-icon-1.png);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
 
 .intro {

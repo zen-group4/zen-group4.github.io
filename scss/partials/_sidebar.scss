@@ -2,13 +2,54 @@
 
 $sidebar-margin-sm: 1.5em;
 
+@mixin aside-titles($title-color) {
+    color: $title-color;
+    margin: 0;
+    font-family: $secondary-font;
+    text-transform: capitalize;
+    font-size: 2.25em;
+    padding: .5em;
+}
+
+@mixin list-format($link-color) {
+    ul{
+        list-style: none;       
+        li {
+            margin: .125em;
+            padding: .25em;
+            border-bottom: 1px solid $dark-jungle-green;
+            a {
+                color: $link-color;
+                text-decoration: none;
+                &:hover {
+                    color: $cultured-white;
+                    background-color: $pacific-blue;  
+                }
+                &:active {
+                    color: $light-blue;
+                    background-color: $dark-jungle-green;
+                }
+                    &:visited {
+                    color: $pacific-blue;
+                }
+            }
+        }
+    }
+}
+
+@mixin box-format($background){
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background-color: $background;
+    border: 2px dashed $dark-jungle-green;
+}
+
 .sidebar {
     display: block;
     margin-left: $sidebar-margin-sm;
     margin-right: $sidebar-margin-sm;
     margin-bottom: $sidebar-margin-sm;
-    padding-top: 1em;
-    
+    padding-top: 0;
     @include MQ(L) {
         padding-top: 10em;
         grid-column: 3/4;
@@ -16,14 +57,41 @@ $sidebar-margin-sm: 1.5em;
     }
 }
 
-.wrapper {
-    position: absolute;
-    left: 50%;
-    height: 50%;
-    transform: translate(-50%);
-
-    @include MQ(L) {
-        position: static;
-        transform: translate(0);       
-    }
+.select{  
+    @include aside-titles($teal);
 }
+
+.archives{
+    @include aside-titles($dark-jungle-green);
+}
+
+.resources{
+    @include aside-titles($cultured-white);
+}
+
+.design-selection {
+    @include box-format(lighten($light-blue, $lighten));
+    @include list-format($teal);
+    font-family: $primary-font;
+}
+
+.design-archives {
+    @include box-format(lighten($pacific-blue, $lighten));
+    @include list-format($dark-jungle-green);
+}
+
+.zen-resources {
+    @include box-format($teal);
+    @include list-format($cultured-white);
+    font-family: $primary-font;
+    font-size: 1em;
+}
+
+.design-name, .next, .viewall {
+    font-family: $secondary-font;
+    text-transform: capitalize;
+    font-size: 1.75em;
+    display:block;
+    padding: 0 0 0 .1em;
+}
+

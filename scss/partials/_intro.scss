@@ -1,40 +1,5 @@
 // Put intro elements here.
 
-header, header > h1, header > h2 {
-    background: none;
-}
-
-header::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24em;
-    height: 22em;
-    border-radius: 12em / 11em;
-    transform: translate(-50%, -45%);
-
-    @include MQ(L) {
-        width: 32em;
-        height: 30em;
-        border-radius: 16em / 15em;
-        transform: translate(-50%, -50%);
-    }
-
-    background: radial-gradient($cultured-white, $light-blue);
-    z-index: -1;
-}
-
-@include MQ(L) {
-    header::after {
-        content: url(https://zen-group4.github.io/styleguide/src/assets/branding/touch-icon-1.png);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-    }
-}
-
 .intro {
     @include MQ(L) {
     grid-column: 2/3;
@@ -50,7 +15,7 @@ header::before {
         content: url('jellyfish-svg');
         position: absolute;
         top: 12.5em;
-        left: 0;
+        left: 1em;
         display: block;
         width: 20%;
         height: 25em;
@@ -58,56 +23,39 @@ header::before {
     }
 }
 
-
 .summary {
     position: static;
-    //width: 100%;
     display: block;
+    margin: 0;
+    padding: 1em;
+    background-color: lighten($pacific-blue, $lighten);
+    border: 2px dashed $dark-jungle-green;
+    p{
+    font-size: 1.5em;
+    margin: 1em;
+        &:first-child{
+            font-family: $secondary-font;
+        }
+        &:nth-child(2){
+            font-family: $primary-font;
+            a{
+                text-decoration: none;
+                color: $teal;
+            }
+        }
+    }
     @include MQ(L) {
         position: absolute;
-        top: 37em;
-        left: 0;
-        width: 22%;
+        top: 39.5em;
+        left: 1em;
+        width: 18%;
     }
 }
-
 
 .preamble {
     display: block;
     @include MQ(L) {
         padding-top: 5em;
-    }
-}
-
-.preamble::before {
-    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
-    opacity: 0.3;
-    z-index: -1;
-    position: absolute;
-    left: 40%;
-    transform: translate(-50%);
-    margin-top: 4em;
-
-    @include MQ(L) {
-        display: none;
-        position: static;
-        content: "";
-    }
-}
-
-.benefits::before {
-    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
-    opacity: 0.25;
-    z-index: -1;
-    position: absolute;
-    left: 40%;
-    transform: translate(-50%);
-    margin-top: 6em;
-
-    @include MQ(L) {
-        display: none;
-        position: static;
-        content: "";
     }
 }
 

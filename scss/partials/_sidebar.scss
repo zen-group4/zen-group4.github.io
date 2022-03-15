@@ -41,7 +41,8 @@ $sidebar-margin-sm: 1.5em;
     margin: 1em 0 0 0;
     padding: 1em;
     background-color: $background;
-    border: 2px dashed $dark-jungle-green;
+    border: 1px dotted $teal;
+    border-radius: 3px;
 }
 
 .sidebar {
@@ -85,6 +86,7 @@ $sidebar-margin-sm: 1.5em;
     @include list-format($cultured-white);
     font-family: $primary-font;
     font-size: 1em;
+    border-color: $dark-jungle-green;
 }
 
 .design-name, .next, .viewall {

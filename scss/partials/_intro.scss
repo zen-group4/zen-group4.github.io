@@ -29,8 +29,9 @@
     margin: 0;
     padding: 1em;
     background-color: lighten($pacific-blue, $lighten);
-    border: 2px dashed $dark-jungle-green;
-    p{
+    border: 1px dotted $teal;
+
+    p {
     font-size: 1.5em;
     margin: 1em;
         &:first-child{
@@ -49,7 +50,8 @@
         top: 39.5em;
         left: 1em;
         width: 18%;
-    }
+        border-radius: 100em / 30em; 
+}
 }
 
 .preamble {

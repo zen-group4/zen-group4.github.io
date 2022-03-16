@@ -17,7 +17,7 @@ $sidebar-margin-sm: 1.5em;
         li {
             margin: .125em;
             padding: .25em;
-            border-bottom: 1px solid $dark-jungle-green;
+            border-bottom: 1px solid $teal;
             a {
                 color: $link-color;
                 text-decoration: none;
@@ -40,9 +40,10 @@ $sidebar-margin-sm: 1.5em;
 @mixin box-format($background){
     margin: 1em 0 0 0;
     padding: 1em;
+    padding-bottom: 3em;
     background-color: $background;
     border: 1px dotted $teal;
-    border-radius: 3px;
+    border-radius: 100em / 20em;
 }
 
 .sidebar {

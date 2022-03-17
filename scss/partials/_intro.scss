@@ -1,5 +1,40 @@
 // Put intro elements here.
 
+header, header > h1, header > h2 {
+    background: none;
+}
+
+header::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24em;
+    height: 22em;
+    border-radius: 12em / 11em;
+    transform: translate(-50%, -45%);
+
+    @include MQ(L) {
+        width: 32em;
+        height: 30em;
+        border-radius: 16em / 15em;
+        transform: translate(-50%, -50%);
+    }
+
+    background: radial-gradient($cultured-white, $light-blue);
+    z-index: -1;
+}
+
+@include MQ(L) {
+    header::after {
+        content: url(https://zen-group4.github.io/styleguide/src/assets/branding/touch-icon-1.png);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
 .intro {
     @include MQ(L) {
     grid-column: 2/3;

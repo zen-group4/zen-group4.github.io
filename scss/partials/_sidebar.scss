@@ -51,13 +51,24 @@ $sidebar-margin-sm: 1.5em;
     margin-left: $sidebar-margin-sm;
     margin-right: $sidebar-margin-sm;
     margin-bottom: $sidebar-margin-sm;
-    padding-top: 0;
+    padding-top: 2em;
     @include MQ(L) {
         padding-top: 10em;
         grid-column: 3/4;
         grid-row: 1/3;
     }
 }
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%);
+    @include MQ(L) {
+        position: static;
+        transform: translate(0);       
+    }
+} 
 
 .select{  
     @include aside-titles($teal);

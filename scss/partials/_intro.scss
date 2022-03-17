@@ -43,6 +43,30 @@ header::before {
     }
 }
 
+.intro a {
+    position: relative;
+    display: inline-block;
+    padding: 1px 10px 1px 32px;
+    margin: -1px -10px -1px -6px;
+    border-radius: 1px;
+    text-transform: uppercase;
+}
+
+.intro a::before {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    padding: 2px;
+
+    content: "D";
+    font-size: 16px;
+    text-indent: 0;
+    font-family: verdemoderna;
+
+    text-transform: none;
+}
+
 //Image1---top image
 .intro::after {
     display: none; 

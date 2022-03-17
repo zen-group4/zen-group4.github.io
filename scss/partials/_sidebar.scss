@@ -63,10 +63,12 @@ $sidebar-margin-sm: 1.5em;
     position: absolute;
     left: 50%;
     height: 50%;
+    width: 60%;
     transform: translate(-50%);
     @include MQ(L) {
         position: static;
-        transform: translate(0);       
+        transform: translate(0);
+        width: 100%;
     }
 } 
 

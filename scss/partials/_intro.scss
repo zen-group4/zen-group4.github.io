@@ -23,6 +23,7 @@ header::before {
     left: 0;
     width: 100%;
     justify-content: center;
+    overflow: hidden;   // Otherwise we get a horizontal scroll bar
     z-index: -1;
 
     @include MQ(L) {

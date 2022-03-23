@@ -10,9 +10,10 @@ build
 .cache
 .sass-cache/
 .parcel-cache
-*.css
 *.css.map
 *.sass.map
 *.scss.map
+
+styleguide/src/css
 
 .DS_Store

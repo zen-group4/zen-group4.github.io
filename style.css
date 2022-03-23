@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+@font-face {
+  font-family: "verdemoderna";
+  src: url("https://zen-group4.github.io/fonts/verdemoderna.eot");
+  src: url("https://zen-group4.github.io/fonts/verdemoderna.woff"), url("https://zen-group4.github.io/fonts/verdemoderna.otf") format("opentype"), url("https://zen-group4.github.io/fonts/verdemoderna.svg#filename") format("svg");
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2 {
+  color: #13272bff;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Bilbo Swash Caps", cursive;
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #13272bff;
+}
+p a {
+  color: #58a6b6ff;
+}
+
+.summary {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.preamble > h3::before,
+.main h3::before {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
+.preamble h3::after,
+.main h3::after {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-left: 0.5em;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f5f5f5ff;
+}
+
+p {
+  margin-top: 1em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  line-height: 1.4;
+  /*
+  @include MQ(S) {
+      font-size: 1.6rem;
+      line-height: 1.6;
+  }
+  */
+}
+p a {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .page-wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    position: relative;
+  }
+}
+
+header, header > h1, header > h2 {
+  background: none;
+}
+
+header > h1 {
+  margin-top: 0.5em;
+}
+@media only screen and (min-width: 800px) {
+  header > h1 {
+    margin-top: 1.5em;
+  }
+}
+
+header {
+  margin-bottom: 4em;
+}
+
+header::before {
+  content: url(https://zen-group4.github.io/styleguide/src/assets/branding/underwater-sunlight-sm.png);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+}
+@media only screen and (min-width: 800px) {
+  header::before {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/underwater-sunlight.png);
+    display: flex;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    transform: none;
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  header::after {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/touch-icon-1.png);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@media only screen and (min-width: 800px) {
+  .intro {
+    grid-column: 2/3;
+    display: block;
+    grid-row: 1/2;
+  }
+}
+
+.intro a {
+  position: relative;
+  display: inline-block;
+  padding: 1px 10px 1px 32px;
+  margin: -1px -10px -1px -6px;
+  border-radius: 1px;
+  text-transform: uppercase;
+}
+
+.intro a::before {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  padding: 2px;
+  content: "D";
+  font-size: 16px;
+  text-indent: 0;
+  font-family: verdemoderna;
+  text-transform: none;
+}
+
+.intro::after {
+  display: none;
+}
+@media only screen and (min-width: 800px) {
+  .intro::after {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+    display: block;
+    position: absolute;
+    top: 12.5em;
+    left: 1em;
+    padding-top: 1em;
+    width: 20%;
+    height: 25em;
+  }
+}
+
+.summary {
+  position: static;
+  display: block;
+  margin: 10em 2em 3em 2em;
+  padding: 1em;
+  background-color: #8dc2cd;
+  border: 1px dotted #107E7Eff;
+  border-radius: 30em/100em;
+}
+.summary p {
+  font-size: 1.5em;
+  margin: 1em;
+}
+.summary p:first-child {
+  font-family: "Bilbo Swash Caps", cursive;
+}
+.summary p:nth-child(2) {
+  font-family: "Ubuntu", sans-serif;
+}
+.summary p:nth-child(2) a {
+  text-decoration: none;
+  color: #107E7Eff;
+}
+@media only screen and (min-width: 800px) {
+  .summary {
+    position: absolute;
+    top: 39.5em;
+    left: 1em;
+    width: 18%;
+    border-radius: 100em/30em;
+  }
+}
+
+.preamble {
+  display: block;
+}
+@media only screen and (min-width: 800px) {
+  .preamble {
+    padding-top: 5em;
+  }
+}
+
+.preamble::before {
+  content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%);
+  margin-top: 4em;
+}
+@media only screen and (min-width: 800px) {
+  .preamble::before {
+    display: none;
+    position: static;
+    content: "";
+  }
+}
+
+.benefits::before {
+  content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+  opacity: 0.25;
+  z-index: -1;
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%);
+  margin-top: 6em;
+}
+@media only screen and (min-width: 800px) {
+  .benefits::before {
+    display: none;
+    position: static;
+    content: "";
+  }
+}
+
+.preamble > h3::before {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
+.preamble h3::after {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-left: 0.5em;
+}
+
+/*  Jellyfish graphic - The following CSS doesn't quite work
+.explanation::before,
+.benefits::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: -25%;
+    background: url("styleguide/src/assets/jellyfish.svg");
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+*/
+.main {
+  grid-column: 1/span 3;
+  grid-row: 2/3;
+}
+
+.participation {
+  display: block;
+}
+@media only screen and (min-width: 800px) {
+  .participation {
+    padding: 0 25%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .participation::before {
+    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+    position: absolute;
+    bottom: 11em;
+    right: 1em;
+    display: block;
+    width: 20%;
+    height: 25em;
+    overflow: hidden;
+  }
+}
+
+.main h3::before {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
+.main h3::after {
+  content: url(styleguide/src/assets/branding/favicon-1.png);
+  vertical-align: middle;
+  padding-left: 0.5em;
+}
+
+.explanation {
+  display: block;
+}
+@media only screen and (min-width: 800px) {
+  .explanation {
+    padding: 0 25%;
+  }
+}
+
+.requirements {
+  display: block;
+}
+@media only screen and (min-width: 800px) {
+  .requirements {
+    padding-right: 25%;
+  }
+}
+
+.benefits {
+  display: block;
+}
+@media only screen and (min-width: 800px) {
+  .benefits {
+    padding-right: 25%;
+  }
+}
+
+.requirements p:last-of-type {
+  text-align: center;
+  margin: 0 2em;
+  margin-top: 1em;
+}
+
+footer {
+  margin-top: 1.5em;
+  text-align: center;
+  background-color: #2a5760;
+}
+@media only screen and (min-width: 800px) {
+  footer {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(https://zen-group4.github.io/styleguide/src/assets/branding/underwater-coral-bottom.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+footer a {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  padding: 1em 0;
+  margin: 0 0.5em;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+@media only screen and (min-width: 800px) {
+  footer a {
+    width: 4em;
+    height: 4em;
+    padding: 1.75em 0;
+    margin: 0 2em;
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+footer a::before {
+  font-size: 3em;
+  font-family: "verdemoderna";
+}
+@media only screen and (min-width: 800px) {
+  footer a::before {
+    font-size: 4em;
+  }
+}
+footer .zen-validate-html::before {
+  content: "5";
+}
+footer .zen-validate-css::before {
+  content: "3";
+}
+footer .zen-license::before {
+  content: "c";
+}
+footer .zen-accessibility::before {
+  content: "a";
+}
+footer .zen-github::before {
+  content: "g";
+}
+
+.sidebar {
+  display: block;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  padding-top: 2em;
+}
+@media only screen and (min-width: 800px) {
+  .sidebar {
+    padding-top: 10em;
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  height: 50%;
+  width: 60%;
+  transform: translate(-50%);
+}
+@media only screen and (min-width: 800px) {
+  .wrapper {
+    position: static;
+    transform: translate(0);
+    width: 100%;
+  }
+}
+
+.select {
+  color: #107E7Eff;
+  margin: 0;
+  font-family: "Bilbo Swash Caps", cursive;
+  text-transform: capitalize;
+  font-size: 2.25em;
+  padding: 0.5em;
+}
+
+.archives {
+  color: #13272bff;
+  margin: 0;
+  font-family: "Bilbo Swash Caps", cursive;
+  text-transform: capitalize;
+  font-size: 2.25em;
+  padding: 0.5em;
+}
+
+.resources {
+  color: #f5f5f5ff;
+  margin: 0;
+  font-family: "Bilbo Swash Caps", cursive;
+  text-transform: capitalize;
+  font-size: 2.25em;
+  padding: 0.5em;
+}
+
+.design-selection {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  padding-bottom: 3em;
+  background-color: #a7ced680;
+  border: 1px dotted #107E7Eff;
+  border-radius: 100em/20em;
+  font-family: "Ubuntu", sans-serif;
+}
+.design-selection ul {
+  list-style: none;
+}
+.design-selection ul li {
+  margin: 0.125em;
+  padding: 0.25em;
+  border-bottom: 1px solid #107E7Eff;
+}
+.design-selection ul li a {
+  color: #107E7Eff;
+  text-decoration: none;
+}
+.design-selection ul li a:hover {
+  color: #f5f5f5ff;
+  background-color: #58a6b6ff;
+}
+.design-selection ul li a:active {
+  color: #a7ced6ff;
+  background-color: #13272bff;
+}
+.design-selection ul li a:visited {
+  color: #58a6b6ff;
+}
+
+.design-archives {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  padding-bottom: 3em;
+  background-color: #8dc2cd;
+  border: 1px dotted #107E7Eff;
+  border-radius: 100em/20em;
+}
+.design-archives ul {
+  list-style: none;
+}
+.design-archives ul li {
+  margin: 0.125em;
+  padding: 0.25em;
+  border-bottom: 1px solid #107E7Eff;
+}
+.design-archives ul li a {
+  color: #13272bff;
+  text-decoration: none;
+}
+.design-archives ul li a:hover {
+  color: #f5f5f5ff;
+  background-color: #58a6b6ff;
+}
+.design-archives ul li a:active {
+  color: #a7ced6ff;
+  background-color: #13272bff;
+}
+.design-archives ul li a:visited {
+  color: #58a6b6ff;
+}
+
+.zen-resources {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  padding-bottom: 3em;
+  background-color: #107E7Eff;
+  border: 1px dotted #107E7Eff;
+  border-radius: 100em/20em;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+  border-color: #13272bff;
+}
+.zen-resources ul {
+  list-style: none;
+}
+.zen-resources ul li {
+  margin: 0.125em;
+  padding: 0.25em;
+  border-bottom: 1px solid #107E7Eff;
+}
+.zen-resources ul li a {
+  color: #f5f5f5ff;
+  text-decoration: none;
+}
+.zen-resources ul li a:hover {
+  color: #f5f5f5ff;
+  background-color: #58a6b6ff;
+}
+.zen-resources ul li a:active {
+  color: #a7ced6ff;
+  background-color: #13272bff;
+}
+.zen-resources ul li a:visited {
+  color: #58a6b6ff;
+}
+
+.design-name, .next, .viewall {
+  font-family: "Bilbo Swash Caps", cursive;
+  text-transform: capitalize;
+  font-size: 1.75em;
+  display: block;
+  padding: 0 0 0 0.1em;
+}

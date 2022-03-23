@@ -85,7 +85,7 @@ $sidebar-margin-sm: 1.5em;
 }
 
 .design-selection {
-    @include box-format(lighten($light-blue, $lighten));
+    @include box-format($light-blue-transparent);
     @include list-format($teal);
     font-family: $primary-font;
 }

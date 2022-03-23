@@ -30,15 +30,16 @@
 }
 
 //image2--bottom image
-.participation::before{
+.participation::before {
     @include MQ(L) {
-    content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
-    position: absolute;
-    bottom: 11em;
-    right: 1em;
-    display: block;
-    width: 20%;
-    height: 25em;
+        content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+        position: absolute;
+        bottom: 11em;
+        right: 1em;
+        display: block;
+        width: 20%;
+        height: 25em;
+        overflow: hidden; // Otherwise we get a horizontal scroll bar
     }
 }
 

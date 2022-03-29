@@ -29,7 +29,7 @@
     }  
 }
 
-//image2--bottom image
+// Bottom-right jellyfish image
 .participation::before {
     @include MQ(L) {
         content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
@@ -40,6 +40,11 @@
         width: 20%;
         height: 25em;
         overflow: hidden; // Otherwise we get a horizontal scroll bar
+        transition: 0.8s
+    }
+    @include MQ(XL) {
+        transform: scale(50%) translateY(7em);
+        transition: 1s;
     }
 }
 

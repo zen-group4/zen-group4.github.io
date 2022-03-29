@@ -15,6 +15,7 @@ header {
     margin-bottom: 4em;
 }
 
+// Gradient underwater sunlight with fish background
 header::before {
     content: url(https://zen-group4.github.io/styleguide/src/assets/branding/underwater-sunlight-sm.png);
     display: flex;
@@ -80,9 +81,12 @@ header::before {
 }
 // End download icons
 
-//Image1---top image
+
+// Top-left jellyfish image
+$transition-time: 0.8s;
+
 .intro::after {
-    display: none; 
+    display: none;
     @include MQ(L) {
         content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
         display: block;
@@ -92,6 +96,11 @@ header::before {
         padding-top: 1em;
         width: 20%;
         height: 25em;
+        transition: $transition-time;
+        @media only screen and (max-width: $ML) {
+            transform: scale(50%) translateY(7em);
+            transition: $transition-time;
+        }
     }
 }
 

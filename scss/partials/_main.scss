@@ -1,22 +1,5 @@
 // Style elements in main section here.
 
-/*  Jellyfish graphic - The following CSS doesn't quite work
-.explanation::before,
-.benefits::before {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: -25%;
-    background: url("styleguide/src/assets/jellyfish.svg");
-    background-repeat: no-repeat;
-    transform: rotate(-90deg);
-    width: 150%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.25;
-}
-*/
-
 .main{   
     grid-column:  1 / span 3;
     grid-row: 2/3;
@@ -88,3 +71,11 @@
     margin-top: 1em
 }
 
+.requirements::after {
+    content: "Jellyfish graphic courtesy ARSGRAFIK. Underwater photography by Willyam Bradbury, used with permission.";
+    display: block;
+    font-family: $primary-font;
+    font-size: 0.67rem;
+    text-align: center;
+    padding-top: .33rem;
+}

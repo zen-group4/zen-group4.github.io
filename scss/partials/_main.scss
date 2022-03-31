@@ -26,7 +26,7 @@
         transition: 0.8s
     }
     @include MQ(XL) {
-        transform: scale(50%) translateY(7em);
+        transform: scale(0.5) translateY(7em);
         transition: 1s;
     }
 }

@@ -98,7 +98,7 @@ $transition-time: 0.8s;
         height: 25em;
         transition: $transition-time;
         @media only screen and (max-width: $ML) {
-            transform: scale(50%) translateY(7em);
+            transform: scale(0.5) translateY(7em);
             transition: $transition-time;
         }
     }

@@ -214,10 +214,10 @@ header::before {
 @media only screen and (min-width: 800px) {
   .intro::after {
     content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
-    display: block;
+    display: flex;
     position: absolute;
     top: 12.5em;
-    left: 1em;
+    left: 2.5vw;
     padding-top: 1em;
     width: 20%;
     height: 25em;
@@ -226,6 +226,7 @@ header::before {
 }
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
   .intro::after {
+    left: 1vw;
     transform: scale(0.5) translateY(7em);
     transition: 0.8s;
   }
@@ -336,11 +337,10 @@ header::before {
 @media only screen and (min-width: 800px) {
   .participation::before {
     content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+    display: flex;
     position: absolute;
     bottom: 11em;
     right: 1em;
-    display: block;
-    width: 20%;
     height: 25em;
     overflow: hidden;
     transition: 0.8s;
@@ -349,6 +349,8 @@ header::before {
 @media only screen and (min-width: 1565px) {
   .participation::before {
     transform: scale(0.5) translateY(7em);
+    right: 1em;
+    width: 22%;
     transition: 1s;
   }
 }

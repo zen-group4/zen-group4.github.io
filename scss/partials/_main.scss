@@ -16,17 +16,19 @@
 .participation::before {
     @include MQ(L) {
         content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
+        display: flex;
         position: absolute;
         bottom: 11em;
         right: 1em;
-        display: block;
-        width: 20%;
         height: 25em;
         overflow: hidden; // Otherwise we get a horizontal scroll bar
         transition: 0.8s
     }
+
     @include MQ(XL) {
         transform: scale(0.5) translateY(7em);
+        right: 1em;
+        width: 22%;
         transition: 1s;
     }
 }

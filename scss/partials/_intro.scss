@@ -89,15 +89,16 @@ $transition-time: 0.8s;
     display: none;
     @include MQ(L) {
         content: url(https://zen-group4.github.io/styleguide/src/assets/branding/jellyfish.png);
-        display: block;
+        display: flex;
         position: absolute;
         top: 12.5em;
-        left: 1em;
+        left: 2.5vw;
         padding-top: 1em;
         width: 20%;
         height: 25em;
         transition: $transition-time;
         @media only screen and (max-width: $ML) {
+            left: 1vw;
             transform: scale(0.5) translateY(7em);
             transition: $transition-time;
         }

@@ -630,3 +630,140 @@ footer .zen-github::before {
   display: block;
   padding: 0 0 0 0.1em;
 }
+
+@media only screen and (min-width: 800px) {
+  .explanation::before {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 5;
+    content: url(../styleguide/src/assets/fish1.svg);
+    transform: translate(10vw, 70vh) rotate(0deg) scale(1);
+    animation: swim1 30s cubic-bezier(0.27, 0.66, 0.75, 0.21) 4s infinite;
+  }
+
+  .explanation::after {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 5;
+    content: url(../styleguide/src/assets/fish2.svg);
+    transform: translate(-10vw, 20vh) rotate(0deg) scale(0.75);
+    filter: grayscale(0%);
+    filter: brightness(100%);
+    filter: contrast(100%);
+    animation: swim2 50s cubic-bezier(0.01, 0.62, 1, 0.69) 3s infinite;
+  }
+
+  .explanation h3::before {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 8;
+    content: url(../styleguide/src/assets/fish3.svg);
+    transform: translate(-10vw, 1vh) rotate(0deg) scale(1);
+    filter: grayscale(0%) brightness(100%) contrast(100%);
+    animation: swim3 30s ease 1s infinite;
+  }
+
+  .explanation h3::after {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 8;
+    content: url(../styleguide/src/assets/fish4.svg);
+    transform: translate(10vw, -5vh) rotate(0deg) scale(1);
+    animation: swim4 40s 5s infinite;
+  }
+
+  .explanation p::after {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 8;
+    content: url(../styleguide/src/assets/fish5.svg);
+    transform: translate(-10vw, 50vh) rotate(0deg) scale(1);
+    animation: swim5 60s ease-in-out infinite;
+  }
+
+  @keyframes swim1 {
+    0% {
+      transform: translate(10vw, 70vh) rotate(0deg) scale(0.9);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50vw, 30vh) rotate(0deg) scale(1);
+      opacity: 0.25;
+    }
+    100% {
+      transform: translate(-100vw, -15vh) rotate(0deg) scale(0.9);
+      opacity: 1;
+    }
+  }
+  @keyframes swim2 {
+    0% {
+      transform: translate(-10vw, 20vh) rotate(0deg) scale(0.75);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(50vw, 30vh) rotate(0deg) scale(1.25);
+      opacity: 0.25;
+    }
+    100% {
+      transform: translate(100vw, 50vh) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes swim3 {
+    0% {
+      transform: translate(-10vw, 1vh) rotate(0deg) scale(0.9);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(30vw, 50vh) rotate(-20deg) scale(1);
+      opacity: 0.25;
+    }
+    100% {
+      transform: translate(100vw, 70vh) rotate(-25deg) scale(0.9);
+      opacity: 1;
+    }
+  }
+  @keyframes swim4 {
+    0% {
+      transform: translate(10vw, -5vh) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50vw, 10vh) rotate(0deg) scale(1);
+      opacity: 0.25;
+    }
+    52% {
+      transform: translate(-50vw, 10vh) rotate(15deg) scale(1);
+      opacity: 0.25;
+    }
+    100% {
+      transform: translate(-100vw, 5vh) rotate(15deg) scale(0.75);
+      opacity: 1;
+    }
+  }
+  @keyframes swim5 {
+    0% {
+      transform: translate(-10vw, 50vh) rotate(20deg) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(50vw, 50vh) rotate(15deg) scale(1);
+      opacity: 0.25;
+    }
+    60% {
+      transform: translate(55vw, 50vh) rotate(-20deg) scale(1);
+      opacity: 0.25;
+    }
+    100% {
+      transform: translate(100vw, -2vh) rotate(-20deg) scale(0.75);
+      opacity: 1;
+    }
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
